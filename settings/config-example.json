@@ -1,0 +1,13 @@
+{
+  "chrono": {
+    "token": ""
+  },
+  "bot": {
+    "token": "",
+    "username": "",
+    "chat_id": ""
+  },
+  "logging": {
+    "level": 40
+  }
+}
