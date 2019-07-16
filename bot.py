@@ -3,7 +3,6 @@ import json
 import logging
 import os
 import random
-import sys
 import time
 
 from telegram.ext import CommandHandler
@@ -12,8 +11,9 @@ from telegram.ext import Updater
 
 from chronogg import Chrono
 
+
 #  Global variable
-current_path = str(sys.argv[0][:len(os.path.basename(sys.argv[0]))*(-1)])
+current_path = os.path.dirname(os.path.abspath(__file__))
 
 
 class Robot:
@@ -113,13 +113,13 @@ class Robot:
 
 if __name__ == "__main__":
     try:
-        with open(current_path + '\\settings\\config.json', 'r') as conf_file:
+        with open(os.path.join(current_path, 'settings', 'config.json'), 'r') as conf_file:
             config = json.load(conf_file)
     except IOError:
-        logging.basicConfig(filename=current_path + '\\settings\\log.log', filemode='a',
+        logging.basicConfig(filename=os.path.join(current_path, 'settings', 'log.log'), filemode='a',
                             format='%(asctime)s %(levelname)s:%(message)s', level=10)
         logging.error('config.json missing or not in right format', exc_info=True)
-    logging.basicConfig(filename=current_path + '\\settings\\log.log', filemode='a',
+    logging.basicConfig(filename=os.path.join(current_path, 'settings', 'log.log'), filemode='a',
                         format='%(asctime)s %(levelname)s:%(message)s', level=config['logging']['level'])
     rob = Robot(config)
     rob.run()
