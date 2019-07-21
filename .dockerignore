@@ -1,0 +1,4 @@
+settings/log.log
+.dockerignore
+.gitignore
+venv/
