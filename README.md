@@ -16,16 +16,25 @@ Bot can do this commands on demand:
 - /update "token" - Update Authorization Token
 
 Usage:
-- Install all requirements with **pip install -r requirements.txt**
-- Change config-example.json -> config.json and fill it
-- Run bot.py
+-
+- Self run:
+    - Install all requirements with **pip install -r requirements.txt**
+    - Change config-example.json -> config.json and fill it
+    - Run bot.py
+- Docker:
+  - Download settings/config-example.json
+  - Change config-example.json -> config.json and fill it
+  - Pull from docker hub: **docker pull fildah/chronogg_telebot**
+  - Create container with connected volume to directory where is config.json
 
 Config:
+-
 - chrono: token - explained lower
 - bot: token - [https://core.telegram.org/bots](https://core.telegram.org/bots) and [https://telegram.me/botfather](https://telegram.me/botfather)
 - bot: username - [https://telegram.me/userinfobot](https://telegram.me/userinfobot)
 - bot: chat_id - [https://telegram.me/userinfobot](https://telegram.me/userinfobot)
 - logging: level - 40 for ERROR only, 10 for DEBUG
+
 
 Getting token from chrono.gg:
 - Go to https://chrono.gg/ and login
