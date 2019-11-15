@@ -44,7 +44,7 @@ class Robot:
             Filters.user(username=config['bot']['username']) & (Filters.command | Filters.text), self.unknown)
         self.dispatcher.add_handler(unknown_handler)
         self.updater.job_queue.run_daily(
-            self.spin_job, time=datetime.time(18, 0, 0))
+            self.spin_job, time=datetime.time(18, 5, 0))
 
     def run(self):
         self.updater.start_polling()
@@ -100,7 +100,6 @@ class Robot:
                          text="Sorry, I didn't understand that command. Try /start for more info.")
 
     def spin_job(self, bot, job):
-        time.sleep(random.randint(1, 180)*60)
         spin_result = self.chrono.coin_spin()
         if spin_result == 'Coin spin successful.':
             coin_balance = self.chrono.get_coin_balance()
