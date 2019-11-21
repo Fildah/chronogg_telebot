@@ -6,7 +6,7 @@ accompanied with Today's sale.
 
 Bot wont answer anyone other than configured user.
 
-Bot will coin spin evey day, some time from 18:00-21:00 (time is random)
+Bot will coin spin evey day, at 18:05 UTC
 
 Bot can do this commands on demand:
 - /start | /help - List of commands

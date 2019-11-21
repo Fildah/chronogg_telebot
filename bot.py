@@ -2,8 +2,6 @@ import datetime
 import json
 import logging
 import os
-import random
-import time
 
 from telegram.ext import CommandHandler
 from telegram.ext import MessageHandler, Filters
@@ -74,7 +72,7 @@ class Robot:
         result = self.chrono.coin_spin()
         if result == 'Coin spin successful.':
             result = result + '\nCoin balance: ' + self.chrono.get_coin_balance() \
-                     + '\nToday\'s deal' + self.chrono.get_sale()
+                     + '\nToday\'s deal\n' + self.chrono.get_sale()
         bot.send_message(chat_id=update.message.chat_id, text=result)
 
     def balance(self, bot, update):
