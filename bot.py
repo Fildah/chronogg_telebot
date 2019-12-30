@@ -103,7 +103,7 @@ class Robot:
             coin_balance = self.chrono.get_coin_balance()
             sale_result = self.chrono.get_sale()
             bot.send_message(chat_id=self.config['bot']['chat_id'],
-                             text=spin_result + '\nCoin balance: ' + coin_balance + '\nToday\'s deal' + sale_result)
+                             text=spin_result + '\nCoin balance: ' + coin_balance + '\nToday\'s deal\n' + sale_result)
         else:
             bot.send_message(chat_id=self.config['bot']['chat_id'], text=spin_result)
 
