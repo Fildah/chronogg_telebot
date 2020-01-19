@@ -88,7 +88,7 @@ class Robot:
             token = args[0] + ' ' + args[1]
             self.chrono.set_token(token)
             self.config['chrono']['token'] = token
-            with open(current_path + '\\settings\\config.json', 'w') as json_file:
+            with open(os.path.join(current_path, 'settings', 'config.json'), 'w') as json_file:
                 json.dump(self.config, json_file, indent=2)
             bot.send_message(chat_id=update.message.chat_id, text='Token updated.')
 
