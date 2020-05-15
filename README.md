@@ -1,4 +1,7 @@
 # chronogg_telebot
+
+## **Project is archived, on 29 June 2020 chrono.gg coin shop closed and bot became obsolete.**
+
 Personal Telegram bot for site chrono.gg that can automate some task 
 for you. Mainly coin spinning.
 Because coins are rewards for looking at site, every spin is always
